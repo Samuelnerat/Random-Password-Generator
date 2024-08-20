@@ -16,21 +16,18 @@ body {
 .main {
     background-color: white;
     max-width: 500px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; */
-    padding: 30px;
+    padding: 25px;
 }
 
 h1 {
     text-align: center;
-    font-size: 26px;
+    font-size: 24px;
     color: blueviolet;
-    margin: 20px;
+    margin: 18px;
 }
 
 .input{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,36 +40,178 @@ input {
     border: 2px solid blueviolet;
     user-select: none;
     outline: none;
-    font-size: 22px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 18px;
+    margin: 4px 0px;
 }
 
 input::placeholder{
     font-size: 22px;
 }
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+    accent-color: blueviolet;
+}
+.length {
+    display: flex;
+    justify-content: center;
+}
+    
+.length input {
+    text-align: center;
+}
 .btn{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
 }
 button {
-    height: 50px;
+    height: 40px;
     width: 150px;
     color: white;
     background-color: blueviolet;
     border-radius: 7px;
     text-align: center;
     cursor: pointer;
-    font-size: 22px;
-    margin-top: 30px;
+    font-size: 20px;
+    margin-top: 20px;
     border: none;
 }
 
 button:hover{
     width: 160px;
-    height: 55px;
+    height: 45px;
 }
 
 button:active {
     background-color: rgb(25, 11, 38);
 }
 
+.btn1 .button{
+    width: 350px;
+}
+.strength-meter {
+    height: 10px;
+    /* background-color: red; */
+    width: 100%;
+    transition: width 0.3s, background-color 0.3s;
+    margin-top: 10px;
+    border: 3px solid gray;
+}
+.btn_history{
+    font-size: 20px;
+    color: whitesmoke;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn_history:hover{
+    font-size: 22px;
+}
+
+.history {
+    width: 25%;
+    max-width: 300px;
+    background-color: white;
+    border-left: 2px solid blueviolet;
+    padding: 20px;
+    display: none; 
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#copy-confirmation {
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.history-toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+.overlay-content p{
+    font-size: 20px;
+}
+#cancel-overlay {
+    margin-top: 10px;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.history {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.delete-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: red;
+}
